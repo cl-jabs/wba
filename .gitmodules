@@ -1,0 +1,3 @@
+[submodule "lib/cl-webdav"]
+	path = lib/cl-webdav
+	url = https://github.com/cl-jabs/cl-webdav.git

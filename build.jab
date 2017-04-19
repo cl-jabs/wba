@@ -1,0 +1,29 @@
+;;; -*- Mode: Lisp -*-
+(defpackage :wba-system
+  (:use :cl :jabs))
+
+(in-package :wba-system)
+
+(load "cache/quicklisp/wba/dists/quicklisp/software/closure-common-20101107-git/closure-common.asd")
+(load "cache/quicklisp/wba/dists/quicklisp/software/cxml-20110619-git/cxml.asd")
+
+(require 'cxml-xml)
+
+(defproject :wba
+  :name "wba"
+  :author "John Doe <john@doe.local>"
+  :version "0.0.1"
+  :maintainer "John Doe <john@doe.local>"
+  :license "Public Domain"
+  :description "Personal use project"
+  :serial t
+  :skeleton (:default)
+  :bout :default
+  :plugins (:quicklisp@repository)
+  ;;;; Dependencies
+  :depends-on (:cxml-xml :cl-webdav) ;; :cl-fad :cl-ppcre :alexandria)
+  ;; :pathname "some/relative/path" ;; relative name to your project root directory (where skeleton located)
+  ;;;; Add files, mobules etc
+  :components (
+               (:file "wba")
+))
